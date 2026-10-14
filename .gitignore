@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+# trained weights live on huggingface, not in git
+checkpoints/
+
+# local stuff
+.agents/
+.claude/
+.DS_Store
+*.log

@@ -1,0 +1,26 @@
+[project]
+name = "mlx-emotions"
+version = "0.1.0"
+description = "webcam emotion detection on apple silicon, tiny mlx cnn trained on raf-db"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Ranveer Soni", email = "git@ranveersoni.me" }
+]
+keywords = ["mlx", "apple-silicon", "emotion-recognition", "raf-db", "webcam"]
+requires-python = ">=3.12"
+dependencies = [
+    "mlx>=0.32.3",
+    "opencv-python>=4.8",
+    "numpy>=1.26",
+    "pillow>=10.0",
+    "datasets>=3.0",
+]
+
+[project.scripts]
+mlx-emotions = "mlx_emotions:main"
+mlx-emotions-train = "mlx_emotions.training.train:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
